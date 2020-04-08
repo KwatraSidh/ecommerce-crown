@@ -43,7 +43,7 @@ export default function Directory()
     
     return (
         <div className="directory-menu">
-            {sections.map(item => (<MenuItem title={item.title} key={item.id} imageUrl={item.imageUrl} size={item.size}/>))}
+            {sections.map(({id, ...otherAttributes}) => (<MenuItem  key={id} {...otherAttributes}/>))}
         </div>
     )
 }
