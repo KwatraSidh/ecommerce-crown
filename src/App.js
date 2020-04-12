@@ -29,7 +29,7 @@ class App  extends Component {
               id : snapshot.id,
               ...snapshot.data()}
           })//,() => console.log(this.state))
-          console.log(this.state) //pertains to null use the call back function instead
+          //console.log(this.state) //pertains to null use the call back function instead
         })
       }
       
