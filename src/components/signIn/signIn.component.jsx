@@ -5,18 +5,20 @@ import CustomButton from '../custom-button/custom-button.component';
 import {auth,signInWithGoogle} from '../firebase/firebase.utils'
 
 class SignIN extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
          this.state={
-                email:'',
-                password:''
+                email: '',
+                password: ''
         }
     }
     handleSubmit = async event=>{
         event.preventDefault();
+
+        const {email,password} = this.state;
+        
         try{
-           const {email,password} = this.state;
-           await auth.signInWithEmailAndPassword(email,password)
+           await auth.signInWithEmailAndPassword(email, password)
            this.setState({email:'',password:''})
         }
         catch(error){
