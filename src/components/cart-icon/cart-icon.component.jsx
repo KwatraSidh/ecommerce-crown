@@ -4,6 +4,7 @@ import {toggleHiddenCart} from '../../redux/cart/cart.action'
 import {ReactComponent as ShoppingIcon} from '../assets/cart-icon.svg'
 import './cart-icon.styles.scss'
 import {selectCartItemsCount} from '../../redux/cart/cart.selector'
+
 const CartIcon=({toggleHiddenCart,itemCount})=>
      (
         <div className='cart-icon' onClick={toggleHiddenCart}>
