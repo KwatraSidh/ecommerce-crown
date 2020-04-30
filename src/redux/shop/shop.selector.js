@@ -15,6 +15,11 @@ export const shopSelector = createSelector(
     [selectShop],
     shop => shop.collections
 )
+// below code is to convert collection json object to array for the collection overview item
+export const selectCollectionOverview = createSelector(
+    [shopSelector],
+    collections => Object.keys(collections).map(key=> collections[key])
+)
 
 export const selectCategory = categoryUrlParam => createSelector(
     [shopSelector],
@@ -22,3 +27,5 @@ export const selectCategory = categoryUrlParam => createSelector(
    // data normalization achieved
    collections=>collections[categoryUrlParam]
 )
+
+

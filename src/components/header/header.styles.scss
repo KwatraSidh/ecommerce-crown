@@ -4,12 +4,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    position: relative;
   
     .logo-container {
       height: 100%;
       width: 70px;
       padding: 25px;
     }
+
+    .title {
+      position:absolute;
+      margin-left: 100px;
+      margin-top:5px;
+    }
+
   
     .options {
       width: 50%;
